@@ -32,17 +32,19 @@
  <h1 class="header">檔案上傳練習</h1>
  <!----建立你的表單及*設定編碼----->
  <!-- enctype="multipart/form-data 需有這段代碼才能傳輸文件 -->
-<!-- <form action="manage.php" method="post" enctype="multipart/form-data">
-<input type="file" name="file" id="file">
+
+<form action="manage.php" method="post" enctype="multipart/form-data">
+<input type="file" name="img" id="file">
 <input type="text" name="name" id="">
 <input type="submit" value="上傳">
-</form> -->
-<form action="manage.php" method="post" enctype="multipart/form-data">
+</form>
+
+<!-- <form action="manage.php" method="post" enctype="multipart/form-data">
  <input type="file" name="img" id="file">
  <input type="text" name="name" id="">
  <input type="submit" value="上傳">
 
-</form>
+</form> -->
 
 
 
