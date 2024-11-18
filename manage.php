@@ -24,11 +24,12 @@
 include_once "function.php";
 echo $_POST['name'];
 echo "<br>";
-dd($FILES);
+dd($_FILES);
 
 if($_FILES['img']['error']==0){
-    move_uploaded_file($_FILES['img']['tmp_name'],"./files/".$FILES['img']['name']);
+    move_uploaded_file($_FILES['img']['tmp_name'],"./files/".$_FILES['img']['name']);
 }
+
 ?>
 
 
