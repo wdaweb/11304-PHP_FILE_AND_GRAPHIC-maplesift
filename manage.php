@@ -41,7 +41,7 @@ include_once "function.php";
 
 if(isset($_FILES['filename'])){
     if($_FILES['filename']['error']==0){
-        $filename=$_FILES['filename']['name'];
+        $filename=time() . $_FILES['filename']['name'];
         move_uploaded_file($_FILES['filename']['tmp_name'],"./files/".$filename);
         $desc=$_POST['desc'];
 
@@ -71,8 +71,8 @@ foreach($rows as $file){
     echo "<tr>";
     echo "<td><img src='files/{$file['filename']}'></td>";
     echo "<td>{$file['desc']}</td>";
-    echo "<td><a href='del_img.php?file={$file['filename']}'>刪除</a></td>";
-    echo "<td><a href='re_upload.php?file={$file['filename']}'>重新上傳</a></td>";
+    echo "<td><a href='del_img.php?id={$file['id']}'>刪除</a></td>";
+    echo "<td><a href='re_upload.php?id={$file['id']}'>重新上傳</a></td>";
     echo "</tr>";
 }
 echo "</table>";
