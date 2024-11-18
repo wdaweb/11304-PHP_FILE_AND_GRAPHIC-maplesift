@@ -1,5 +1,11 @@
 <?php
 include_once "function.php";
+$id=$_POST['id'];
+
+$row=find('imgs',$id);
+// dd($_POST);
+// dd($row);
+$row['desc']=$_POST;
 $imgName=$_POST['imgName'];
 
 if(isset($_FILES['img'])){

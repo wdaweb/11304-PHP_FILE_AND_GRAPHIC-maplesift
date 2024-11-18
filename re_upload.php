@@ -29,14 +29,22 @@
     </style>
 </head>
 <body>
- <h1 class="header">檔案上傳練習</h1>
+ <h1 class="header">編輯資料</h1>
  <!----建立你的表單及*設定編碼----->
  <!-- enctype="multipart/form-data 需有這段代碼才能傳輸文件 -->
+<?php
+include_once "function.php";
+$id=$_GET['id'];
+$row=find('imgs',$id);
+// dd($row);
+?>
 
 <form action="update_img.php" method="post" enctype="multipart/form-data">
+    <img src="files/<?=$row['filename']?>" style="width:200px" alt="">
 <input type="file" name="img" id="file">
-<input type="hidden" name="imgName" value="<?=$_GET['file']?>">
-<input type="text" name="name" id="">
+<!-- desc:增加描述 -->
+<input type="text" name="desc" value="<?=$row['desc'];?>">
+<input type="hidden" name="id" value="<?=$id?>">
 <input type="submit" value="上傳">
 </form>
 
