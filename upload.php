@@ -34,8 +34,8 @@
  <!-- enctype="multipart/form-data 需有這段代碼才能傳輸文件 -->
 
 <form action="manage.php" method="post" enctype="multipart/form-data">
-<input type="file" name="img" id="file">
-<input type="text" name="name" id="">
+<input type="file" name="filename" id="file">
+<input type="text" name="desc">
 <input type="submit" value="上傳">
 </form>
 
