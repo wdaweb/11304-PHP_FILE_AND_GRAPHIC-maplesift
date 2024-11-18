@@ -15,11 +15,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>檔案上傳</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        form{
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border:1px solid #ccc;
+            
+        }
+        input{
+            margin:5px;
+        }
+    </style>
 </head>
 <body>
  <h1 class="header">檔案上傳練習</h1>
- <!----建立你的表單及設定編碼----->
-
+ <!----建立你的表單及*設定編碼----->
+ <!-- enctype="multipart/form-data 需有這段代碼才能傳輸文件 -->
+<form action="manage.php" method="post" enctype="multipart/form-data">
+<input type="file" name="file" id="file">
+<input type="submit" value="上傳">
+</form>
 
 
 
